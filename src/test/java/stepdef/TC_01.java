@@ -17,13 +17,12 @@ import org.testng.Assert;
 
 public class TC_01 {
 	
-	WebDriver driver;
-	WebDriverWait wait;
+	WebDriver driver=Hooks.driver;
+	WebDriverWait wait = Hooks.wait;
 	
 	@When("^user navigate to the url \"([^\"]*)\"$")
 	public void user_navigate_to_the_url(String arg1) throws Throwable {
-		WebDriverManager.chromedriver().setup();
-		driver = new ChromeDriver();
+		
 		driver.get(arg1);
 	   
 	}
@@ -42,17 +41,15 @@ public class TC_01 {
 
 	@Then("^user should be on the dashboard page$")
 	public void user_should_be_on_the_dashboard_page() throws Throwable {
-		wait = new WebDriverWait(driver,30);
-		String actual = wait.until(ExpectedConditions.presenceOfElementLocated
+				String actual = wait.until(ExpectedConditions.presenceOfElementLocated
 				(By.xpath("//ul[@class='breadcrumb page-breadcrumb']//following-sibling::h1"))).getText();
 		Assert.assertEquals(actual, "Dashboard");
 	}
 	@When("^user clicks on the Add new order button$")
 	public void user_clicks_on_the_Add_new_order_button() throws Throwable {
-		wait = new WebDriverWait(driver,40);
 		wait.until(ExpectedConditions.presenceOfElementLocated
 				(By.xpath("//i[text()='shopping_basket']//following-sibling::span"))).click();
-		wait.until(ExpectedConditions.presenceOfElementLocated
+		wait.until(ExpectedConditions.elementToBeClickable
 				(By.xpath("//ul[@id='collapse-3']//li[@id='subtab-AdminOrders']//a"))).click();
 		driver.findElement(By.xpath("//a[@title='Add new order']//following-sibling::i")).click();
 	    
@@ -69,10 +66,6 @@ public class TC_01 {
 				(By.xpath("//div[@class='row js-customer-search-results']//p[@class='mb-0 js-customer-email']"))).getText();
 		Assert.assertEquals(email, "pub@prestashop.com");
 		
-	}
-	@And("^close the driver$")
-	public void close_the_driver() throws Throwable {
-	    driver.quit();
 	}
 
 

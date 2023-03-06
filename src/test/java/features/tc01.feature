@@ -9,6 +9,4 @@ Then user should be on the dashboard page
 When user clicks on the Add new order button
 And the user search for the customer
 Then the user should see customer details
-And close the driver
-
 

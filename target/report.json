@@ -3,16 +3,38 @@
     "line": 1,
     "elements": [
       {
+        "before": [
+          {
+            "result": {
+              "duration": 7534322029,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.beforeScenario()"
+            }
+          }
+        ],
         "line": 4,
         "name": "verify dashboard page",
         "description": "",
         "id": "presta;verify-dashboard-page",
+        "after": [
+          {
+            "result": {
+              "duration": 362467659,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.afterScenario()"
+            }
+          }
+        ],
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 5277966887,
+              "duration": 2310322676,
               "status": "passed"
             },
             "line": 5,
@@ -30,7 +52,7 @@
           },
           {
             "result": {
-              "duration": 304139623,
+              "duration": 310820036,
               "status": "passed"
             },
             "line": 6,
@@ -42,7 +64,7 @@
           },
           {
             "result": {
-              "duration": 102050860,
+              "duration": 98973055,
               "status": "passed"
             },
             "line": 7,
@@ -54,7 +76,7 @@
           },
           {
             "result": {
-              "duration": 4847196742,
+              "duration": 7048113834,
               "status": "passed"
             },
             "line": 8,
@@ -66,7 +88,7 @@
           },
           {
             "result": {
-              "duration": 4141242199,
+              "duration": 4096095576,
               "status": "passed"
             },
             "line": 9,
@@ -78,7 +100,7 @@
           },
           {
             "result": {
-              "duration": 121516548,
+              "duration": 119497428,
               "status": "passed"
             },
             "line": 10,
@@ -90,7 +112,7 @@
           },
           {
             "result": {
-              "duration": 561624622,
+              "duration": 567598888,
               "status": "passed"
             },
             "line": 11,
@@ -99,18 +121,6 @@
               "location": "TC_01.the_user_should_see_customer_details()"
             },
             "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 373679055,
-              "status": "passed"
-            },
-            "line": 12,
-            "name": "close the driver",
-            "match": {
-              "location": "TC_01.close_the_driver()"
-            },
-            "keyword": "And "
           }
         ]
       }
@@ -119,6 +129,6 @@
     "description": "",
     "id": "presta",
     "keyword": "Feature",
-    "uri": "/Users/pallavisadhu/eclipse-workspace/Presta_cucumber/src/test/java/features/tc01.feature"
+    "uri": "tc01.feature"
   }
 ]

@@ -7,7 +7,7 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features = "/Users/pallavisadhu/eclipse-workspace/Presta_cucumber/src/test/java/features/tc01.feature"
+		features = "/Users/pallavisadhu/eclipse-workspace/Presta_cucumber/src/test/java/features"
 		,glue= {"stepdef"}
 		,plugin={"pretty","html:target/html","json:target/report.json"}
 		,monochrome=true,dryRun=false,strict=true
